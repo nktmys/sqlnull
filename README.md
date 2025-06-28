@@ -20,7 +20,7 @@ import "github.com/nktmys/sqlnull"
 This code:
 
 ```go
-str := "hollo"
+str := "hello"
 v1 := sqlnull.From(str)
 v2 := sqlnull.FromStr(&str)
 

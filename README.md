@@ -1,8 +1,8 @@
 # sqlnull
 
-`sqlnull` is utilities for working with sql.Null types in Go.
-
 [![GoDoc](https://godoc.org/github.com/nktmys/sqlnull?status.svg)](https://godoc.org/github.com/nktmys/sqlnull) [![Go Report Card](https://goreportcard.com/badge/github.com/nktmys/sqlnull)](https://goreportcard.com/report/github.com/nktmys/sqlnull)
+
+`sqlnull` is utilities for working with sql.Null types in Go.
 
 ## Installation
 1. Get the package

@@ -1,4 +1,3 @@
-// Package sqlnull provides a utility to create sql.Null[T] values.
 package sqlnull
 
 import (

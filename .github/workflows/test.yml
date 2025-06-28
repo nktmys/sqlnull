@@ -1,0 +1,33 @@
+name: Test Go Code
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+    test:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v3
+        with:
+          go-version-file: ./go.mod
+          cache: true
+
+      - name: Install Dependencies
+        run: |
+          go install golang.org/x/vuln/cmd/govulncheck@latest
+          go install honnef.co/go/tools/cmd/staticcheck@latest
+          go mod download
+
+      - name: Run Static Analysis
+        run: |
+          staticcheck ./...
+          govulncheck ./...
+
+      - name: Run Tests
+        run: |
+          go test ./... -failfast

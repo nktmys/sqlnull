@@ -28,5 +28,9 @@ go.work.sum
 .env
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.DS_Store
+.devcontainer/
+.idea/
+.vscode/
+justfile
+__debug_bin*

@@ -1,6 +1,10 @@
 # sqlnull
 
-[![GitHub release](https://img.shields.io/github/release/nktmys/sqlnull.svg)](https://github.com/nktmys/sqlnull/releases) [![GoDoc](https://godoc.org/github.com/nktmys/sqlnull?status.svg)](https://godoc.org/github.com/nktmys/sqlnull) [![Go Report Card](https://goreportcard.com/badge/github.com/nktmys/sqlnull)](https://goreportcard.com/report/github.com/nktmys/sqlnull)
+[![GoDoc](https://godoc.org/github.com/nktmys/sqlnull?status.svg)](https://godoc.org/github.com/nktmys/sqlnull) 
+[![GitHub release](https://img.shields.io/github/release/nktmys/sqlnull.svg)](https://github.com/nktmys/sqlnull/releases) 
+[![Build Status](https://github.com/nktmys/sqlnull/actions/workflows/test.yaml/badge.svg)](https://github.com/nktmys/sqlnull/actions/workflows/test.yaml)
+[![Coverage Status](https://coveralls.io/repos/github/nktmys/sqlnull/badge.svg?branch=master)](https://coveralls.io/github/nktmys/sqlnull?branch=main)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nktmys/sqlnull)](https://goreportcard.com/report/github.com/nktmys/sqlnull)
 
 `sqlnull` is utilities for working with sql.Null types in Go.
 

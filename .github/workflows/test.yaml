@@ -30,4 +30,9 @@ jobs:
 
       - name: Run Tests
         run: |
-          go test ./... -failfast
+          go test ./... -failfast -coverprofile=coverage.out
+
+      - name: Upload Coverage Report
+        uses: shogo82148/actions-goveralls@v1
+        with:
+          path-to-profile: coverage.out

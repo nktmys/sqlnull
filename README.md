@@ -1,9 +1,10 @@
 # sqlnull
 
-[![GoDoc](https://godoc.org/github.com/nktmys/sqlnull?status.svg)](https://godoc.org/github.com/nktmys/sqlnull) 
-[![GitHub release](https://img.shields.io/github/release/nktmys/sqlnull.svg)](https://github.com/nktmys/sqlnull/releases) 
+[![Go version](https://img.shields.io/github/go-mod/go-version/nktmys/sqlnull)](https://github.com/nktmys/sqlnull/blob/main/go.mod) 
+[![GoDoc](https://pkg.go.dev/badge/github.com/nktmys/sqlnull)](https://pkg.go.dev/github.com/nktmys/sqlnull) 
+[![GitHub release](https://img.shields.io/github/release/nktmys/sqlnull)](https://github.com/nktmys/sqlnull/releases) 
 [![Go Report Card](https://goreportcard.com/badge/github.com/nktmys/sqlnull)](https://goreportcard.com/report/github.com/nktmys/sqlnull)
-[![Build Status](https://github.com/nktmys/sqlnull/actions/workflows/test.yaml/badge.svg)](https://github.com/nktmys/sqlnull/actions/workflows/test.yaml)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/nktmys/sqlnull/test.yaml?label=go%20test)](https://github.com/nktmys/sqlnull/actions/workflows/test.yaml)
 [![Coverage Status](https://coveralls.io/repos/github/nktmys/sqlnull/badge.svg?branch=main)](https://coveralls.io/github/nktmys/sqlnull?branch=main)
 
 `sqlnull` is utilities for working with sql.Null types in Go.

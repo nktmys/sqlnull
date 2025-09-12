@@ -21,13 +21,12 @@ import "github.com/nktmys/sqlnull"
 ```
 
 ## Examples
-
 This code:
 
 ```go
 str := "hello"
 v1 := sqlnull.From(str)
-v2 := sqlnull.FromStr(&str)
+v2 := sqlnull.FromPtr(&str)
 
 p1 := sqlnull.Prt(str)
 p2 := sqlnull.PrtOrNil(&str)

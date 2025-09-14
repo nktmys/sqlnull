@@ -8,6 +8,9 @@ jobs:
   request:
     runs-on: ubuntu-latest
     steps:
+      - name: Request goreportcard.com refresh
+        run: |
+          curl -X POST https://goreportcard.com/checks --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'repo=github.com/nktmys/sqlnull'
       - name: Request proxy.golang.org cache
         run: |
           curl -X POST https://proxy.golang.org/github.com/nktmys/sqlnull/@v/${{ github.event.release.tag_name }}.info

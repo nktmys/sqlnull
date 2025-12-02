@@ -48,3 +48,12 @@ func PtrOrNil[T any](v *T) *sql.Null[T] {
 	}
 	return Ptr(*v)
 }
+
+// ValuePtrOrNil retrieves a pointer to the value from sql.Null[T].
+// If Valid is false, it returns nil.
+func ValuePtrOrNil[T any](v sql.Null[T]) *T {
+	if !v.Valid {
+		return nil
+	}
+	return &v.V
+}

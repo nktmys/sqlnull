@@ -30,6 +30,8 @@ v2 := sqlnull.FromPtr(&str)
 
 p1 := sqlnull.Prt(str)
 p2 := sqlnull.PrtOrNil(&str)
+
+vp := sqlnull.ValuePtrOrNil(v1)
 ```
 
 ## Contributing

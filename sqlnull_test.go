@@ -138,3 +138,16 @@ func TestPtrOrNil(t *testing.T) {
 	equal(t, "map", &mapNull, PtrOrNil(mapPtr))
 	equal(t, "nil pointer to struct", structNilNullPtr, PtrOrNil(structNilPtr))
 }
+
+func TestValuePtrOrNil(t *testing.T) {
+	equal(t, "nil", nilPtr, ValuePtrOrNil(nilNull))
+	equal(t, "zero", zeroPtr, ValuePtrOrNil(zeroNull))
+	equal(t, "int", intPtr, ValuePtrOrNil(intNull))
+	equal(t, "string", strPtr, ValuePtrOrNil(strNull))
+	equal(t, "float64", floatPtr, ValuePtrOrNil(floatNull))
+	equal(t, "bool", boolPtr, ValuePtrOrNil(boolNull))
+	equal(t, "struct", structPtr, ValuePtrOrNil(structNull))
+	equal(t, "slice", slicePtr, ValuePtrOrNil(sliceNull))
+	equal(t, "map", mapPtr, ValuePtrOrNil(mapNull))
+	equal(t, "nil struct", structNilPtr, ValuePtrOrNil(structNilNull))
+}

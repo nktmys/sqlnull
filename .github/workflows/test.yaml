@@ -12,16 +12,31 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v5
         with:
           go-version-file: ./go.mod
           cache: true
 
-      - name: Install Dependencies
+      - name: Cache Go tools
+        uses: actions/cache@v4
+        with:
+          path: |
+            /usr/local/bin/govulncheck
+            /usr/local/bin/staticcheck
+          key: ${{ runner.os }}-go-tools-${{ hashFiles('**/go.mod') }}
+
+      - name: Install go tools
         run: |
-          go install golang.org/x/vuln/cmd/govulncheck@latest
-          go install honnef.co/go/tools/cmd/staticcheck@latest
-          go mod download
+          if ! command -v govulncheck &> /dev/null; then
+            go install golang.org/x/vuln/cmd/govulncheck@latest
+          fi
+          if ! command -v staticcheck &> /dev/null; then
+            go install honnef.co/go/tools/cmd/staticcheck@latest
+          fi
+        env:
+          GOBIN: /usr/local/bin
+
+      - run: go mod download
 
       - name: Run Static Analysis
         run: |
